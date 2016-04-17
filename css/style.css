@@ -1,0 +1,178 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Arial, sans-sarif;
+	color: #fff;
+}
+
+div{
+	box-sizing: border-box;
+}
+
+
+
+div.colorHolder{
+	margin: 3em auto;
+	width: 80%;
+	position: relative;
+}
+
+
+div.colorHolder h1 {
+	font-size: 1em;
+	color: gray;
+}
+
+
+div.colorHolder > div.pallet > div{
+	position: relative;
+	box-sizing: border-box;
+	margin-bottom: 2em;
+	cursor:url(../images/zoom.png),url(../images/zoom.cur),auto;
+	overflow: hidden;
+}
+
+div.colorHolder > div > div > div {
+	/*border: 1px solid gray;*/
+	box-sizing: border-box;
+	float: left;
+}
+
+div.colorHolder > div > div > div.dragger{
+	border: 5px dashed yellow;
+	background: none;
+	position:absolute;
+	border-radius: 0.5em;
+	display: none;
+	z-index: 10;
+
+}
+
+div.colorHolder > div > div > div.dragger.show{
+	display: block;
+}
+
+/* slide properties */
+
+div.slideHolder{
+	position: absolute;
+	border: 1px solid red;
+	height: 100%;
+	width: 90%;
+	left: 0;
+	top: 0;
+	margin-left: 1.5em;
+	z-index: 10;
+	display: none;
+}
+
+div.slideView{
+	width: 360px;
+	height: 270px;
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	transform: translateX(-50%);
+	z-index: 10;
+	border:1px solid blue;
+
+}
+
+div.viewPort{
+	position: absolute;
+	width: 360px;
+	height: 270px;
+	overflow: hidden;
+}
+
+div.slideView .arrow {
+	position: absolute;
+	z-index: 100;
+	text-decoration: none;
+}
+
+div.slideView .leftArrow {
+	left: -10%;
+	border: 2px solid gray;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 1.5em 1.5em 1.5em 0;
+	border-color: transparent #007bff transparent transparent;
+
+}
+
+div.slideView .rightArrow {
+	right: -10%;
+	border: 2px solid gray;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 1.5em 0 1.5em 1.5em;
+	border-color: transparent transparent transparent #007bff;
+
+}
+
+div.slideView .topArrow {
+	left: 50%;
+	transform: translateX(-50%);
+	border: 2px solid gray;
+	top: -10%;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 1.5em 1.5em 1.5em;
+	border-color: transparent transparent #007bff transparent;
+}
+
+div.slideView .bottmArrow {
+	left: 50%;
+	transform: translateX(-50%);
+	border: 2px solid yellow;
+	bottom: -10%;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 1.5em 1.5em 0 1.5em;
+	border-color: #007bff transparent transparent transparent;
+}
+
+div.slideView .close {
+	cursor:pointer;
+    color: #fff;
+    border: 1px solid #999;
+    border-radius: 30px;
+    background: #605F61;
+    font-size: 2.5em;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+	right: -10%;
+	top: -15%;
+}
+
+div.slideView .close:before {
+    content: "×";
+}
+
+#pallete1,
+#pallete2,
+#pallete3,
+#pallete4 {
+	display: none;
+}
+
+.palletSlide{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.palletSlide > div{
+float: left;
+}
