@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 2. test it from git and this is updated and checking now after the update 222 ## !!!
+=======
+2. test it from git and this is updated and checking now after the update
+>>>>>>> f487636... Update start.txt
